@@ -8,7 +8,7 @@ import LandingBuyBTC from "../src/views/special-component/Landing/BuyBTC/Landing
 class Home extends Component {
   render() {
     return (
-      <> 
+      <>
         <Head>
           <title>Talan</title>
           <link rel="icon" href="/favicon.ico" />
