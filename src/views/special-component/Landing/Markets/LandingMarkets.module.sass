@@ -1,0 +1,22 @@
+@import "../../../../resources/styles/variable/color-variables"
+
+.landingMarkets
+  .marketsTextDecoration
+    width: 54px
+    height: 2px
+    background: $yellow
+    position: relative
+
+    &::before, &::after
+      content: ""
+      height: 2px
+      background: orange
+      position: absolute
+
+    &::before
+      right: -9px
+      width: 4px
+
+    &::after
+      right: -23px
+      width: 9px

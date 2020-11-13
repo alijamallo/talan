@@ -5,10 +5,11 @@ import Col from "antd/lib/col";
 import images from "../../../../resources/images/images";
 import styles from "./LandingBuyBTC.module.sass"
 import LandingBuyBtcForm from "./Buy/LandingBuyBTCForm";
+import {url} from "inspector";
 
-export default function LandingBuyBTC (){
+export default function LandingBuyBTC() {
     return (
-        <Card backgroundColor="navy" className={styles.landingBuyBTC}>
+        <div className={styles.landingBuyBTC}>
             <div className="container">
                 <Row className="font">
                     <Col span={12}>
@@ -24,14 +25,14 @@ export default function LandingBuyBTC (){
                             </p>
                         </Col>
                         <Col span={24}>
-                            <LandingBuyBtcForm />
+                            <LandingBuyBtcForm/>
                         </Col>
                     </Col>
                     <Col span={12} className="d-flex flex-x-end">
-                        <img width="200px" src={images.landing.cryptocurrency}/>
+                        <img width="250px" src={images.landing.cryptocurrency}/>
                     </Col>
                 </Row>
             </div>
-        </Card>
+        </div>
     );
 }

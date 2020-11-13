@@ -4,17 +4,26 @@ import Row from "antd/lib/row";
 import Col from "antd/lib/col";
 import Button from "../../../../../src/views/public-component/Button/Button";
 import images from "../../../../resources/images/images";
+import styles from "./LandingTradeStake.module.sass";
 
 class LandingTradeStake extends Component {
     render() {
         return (
-            <Card backgroundColor="gray">
+            <Card backgroundColor="gray" className={styles.landingTradeStake}>
                 <div className="container">
                     <Row>
                         <Col span={12}>
-                            <div className="colorWhite fontSizeExtraMedium m-b-32">
-                                <img src={images.landing.trading} width="23px" className="boxShadowYellow m-r-16"/>
-                                <span>Trading</span>
+                            <div className="d-flex flex-y-center m-b-32">
+                                <img
+                                    src={images.landing.trading}
+                                    width="25px"
+                                    height="25px"
+                                    className="m-r-16"
+                                />
+                                <div className="colorWhite fontSizeExtraMedium">
+                                    <span>Trading</span>
+                                    <div className={styles.tradingTextDecoration}/>
+                                </div>
                             </div>
                             <div className="m-b-24">
                                 <div className="colorWhite fontSizeNormal">
@@ -54,11 +63,18 @@ class LandingTradeStake extends Component {
                                 Trade Now
                             </Button>
                         </Col>
-
                         <Col span={12}>
-                            <div className="colorWhite fontSizeExtraMedium m-b-32">
-                                <img src={images.landing.staking} width="23px" className="boxShadowYellow m-r-16"/>
-                                <span>Staking</span>
+                            <div className="m-b-32 d-flex flex-y-center">
+                                <img
+                                    src={images.landing.staking}
+                                    width="25px"
+                                    height="25px"
+                                    className="m-r-16"
+                                />
+                                <div className="colorWhite fontSizeExtraMedium ">
+                                    <span>Staking</span>
+                                    <div className={styles.stakingTextDecoration}/>
+                                </div>
                             </div>
                             <div className="m-b-24">
                                 <div className="colorWhite fontSizeNormal">

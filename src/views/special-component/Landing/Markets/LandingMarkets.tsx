@@ -6,6 +6,7 @@ import Table from "../../../../../src/views/public-component/Table/Table";
 import Button from "../../../../../src/views/public-component/Button/Button";
 import {ColumnsType} from "antd/lib/table/interface";
 import images from "../../../../resources/images/images"
+import styles from "./LandingMarkets.module.sass"
 
 interface fakeResponse {
     pair: string;
@@ -132,7 +133,7 @@ class LandingMarkets extends Component {
 
     render() {
         return (
-            <Card backgroundColor="navy">
+            <Card backgroundColor="navy" className={styles.landingMarkets}>
                 <div className="container">
                     <Row justify="space-between">
                         <Col span={6} className="text-center">
@@ -166,9 +167,12 @@ class LandingMarkets extends Component {
                     <Row justify="center" className="m-y-48">
                         <Col
                             span={24}
-                            className="colorWhite text-center m-b-32 fontSizeExtraMedium"
+                            className="m-b-32 d-flex flex-y-center flex-column"
                         >
-                            Markets
+                            <span>
+                                <span className="colorWhite fontSizeExtraMedium">Markets</span>
+                                <div className={styles.marketsTextDecoration}></div>
+                            </span>
                         </Col>
                         <Col span={14} className="colorGray100 text-center">
                             Talamn Exchange allows you to execute trades swiftly and securely,

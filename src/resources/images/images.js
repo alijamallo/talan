@@ -18,5 +18,8 @@ export default {
     test:{
         btc: require("./test/btc.svg"),
         usa: require("./test/usa.svg"),
+    },
+    background:{
+        one: require('./background/backround.png')
     }
 }
