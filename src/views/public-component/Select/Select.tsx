@@ -15,6 +15,9 @@ export default function Select(props: ISelectProps) {
         if(backgroundColor === "gray"){
             className.push(styles.backgroundGray)
         }
+        if(shape === "round"){
+            className.push(styles.round)
+        }
         return generateClassName(className);
     };
     const newProps: SelectProps<any> = {

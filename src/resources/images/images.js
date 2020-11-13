@@ -14,5 +14,9 @@ export default {
         staking: require("./landing/staking.svg"),
         trading: require("./landing/trading.svg"),
         cryptocurrency: require("./landing/cryptocurrency.svg"),
+    },
+    test:{
+        btc: require("./test/btc.svg"),
+        usa: require("./test/usa.svg"),
     }
 }
