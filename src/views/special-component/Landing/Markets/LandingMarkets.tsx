@@ -3,10 +3,10 @@ import Card from "../../../../../src/views/public-component/Card/Card";
 import Row from "antd/lib/row";
 import Col from "antd/lib/col";
 import Table from "../../../../../src/views/public-component/Table/Table";
-import Button from "../../../../../src/views/public-component/Button/Button";
 import {ColumnsType} from "antd/lib/table/interface";
 import images from "../../../../resources/images/images"
 import styles from "./LandingMarkets.module.sass"
+import Button from "antd/lib/button"
 
 interface fakeResponse {
     pair: string;
@@ -192,13 +192,7 @@ class LandingMarkets extends Component {
                         <span className="colorYellow">Trading</span>
                     </div>
                     <div className="m-b-48 text-center">
-                        <Button
-                            type="default"
-                            boxShadowColor="yellow"
-                            horizontalSize="large"
-                            size="large"
-                            shape="round"
-                        >
+                        <Button className="button yellow boxShadowYellow no-border" shape="round">
                             Log in
                         </Button>
                     </div>

@@ -1,11 +1,9 @@
-import React, {Component} from "react";
-import Card from "../../../../../src/views/public-component/Card/Card";
+import React from "react";
 import Row from "antd/lib/row";
 import Col from "antd/lib/col";
 import images from "../../../../resources/images/images";
 import styles from "./LandingBuyBTC.module.sass"
 import LandingBuyBtcForm from "./Buy/LandingBuyBTCForm";
-import {url} from "inspector";
 
 export default function LandingBuyBTC() {
     return (

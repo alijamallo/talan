@@ -2,9 +2,9 @@ import React, {Component} from "react";
 import Card from "../../../../../src/views/public-component/Card/Card";
 import Row from "antd/lib/row";
 import Col from "antd/lib/col";
-import Button from "../../../../../src/views/public-component/Button/Button";
 import images from "../../../../resources/images/images";
 import styles from "./LandingTradeStake.module.sass";
+import Button from "antd/lib/button"
 
 class LandingTradeStake extends Component {
     render() {
@@ -53,13 +53,7 @@ class LandingTradeStake extends Component {
                                     Create your own asset in under 60 seconds
                                 </div>
                             </div>
-                            <Button
-                                type="default"
-                                boxShadowColor="yellow"
-                                horizontalSize="large"
-                                size="large"
-                                shape="round"
-                            >
+                            <Button className="button yellow boxShadowYellow no-border" shape="round">
                                 Trade Now
                             </Button>
                         </Col>
@@ -104,13 +98,7 @@ class LandingTradeStake extends Component {
                                     Trace any transaction on the blockchain
                                 </div>
                             </div>
-                            <Button
-                                type="default"
-                                boxShadowColor="yellow"
-                                horizontalSize="large"
-                                size="large"
-                                shape="round"
-                            >
+                            <Button className="button yellow boxShadowYellow no-border" shape="round">
                                 Stake Now
                             </Button>
                         </Col>

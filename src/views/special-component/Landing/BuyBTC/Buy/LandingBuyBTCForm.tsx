@@ -2,9 +2,9 @@ import React, {Component} from 'react';
 import Row from "antd/lib/row";
 import {Form} from "antd";
 import AntdSelect from "antd/lib/select";
+import Button from "antd/lib/button"
 import Col from "antd/lib/col";
 import Select from "../../../../public-component/Select/Select";
-import Button from "../../../../public-component/Button/Button";
 import images from "../../../../../resources/images/images";
 
 const {Option} = AntdSelect
@@ -54,11 +54,10 @@ class LandingBuyBtcForm extends Component {
                     <Col span={5}>
                         <Form.Item className="no-margin">
                             <Button
-                                type="default"
-                                boxShadowColor="yellow"
-                                className="w100"
+                                className="button yellow boxShadowYellow w100 no-border"
                                 shape="round"
-                                htmlType="submit">
+                                htmlType="submit"
+                            >
                                 BUY BTC
                             </Button>
                         </Form.Item>
