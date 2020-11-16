@@ -21,5 +21,8 @@ export default {
     },
     background:{
         one: require('./background/backround.png')
+    },
+    icon:{
+        notification: require("./icon/notification.svg")
     }
 }

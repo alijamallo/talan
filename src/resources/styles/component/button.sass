@@ -1,0 +1,26 @@
+@import "../variable/color-variables"
+
+.button
+  &.navy
+    background: $navy-100
+    color: $white
+
+  &.yellow
+    background: $yellow
+    color: $white
+
+  &.no-border
+    border: none
+
+  &.medium
+    padding-left: 25px
+    padding-right: 25px
+
+  &.large
+    padding-left: 40px
+    padding-right: 40px
+
+  &:global(.ant-btn-default)
+    border: none
+    background: $yellow
+    color: $white
