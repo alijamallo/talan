@@ -1,0 +1,24 @@
+@import "../variable/color-variables"
+@import "../variable/variables"
+
+.table
+  border-radius: $borderRadiusLarge
+  overflow: hidden
+
+  .ant-table-thead > tr > th
+    background: $yellow !important
+    color: $white
+    font-weight: 300
+    border-bottom: none
+
+  .ant-table-tbody > tr > td
+    border-bottom: none
+
+  .ant-table-tbody > tr.ant-table-row:hover > td
+    background: none
+
+  .ant-table-tbody
+    background: $gray
+
+  .ant-table
+    background: transparent

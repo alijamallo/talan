@@ -2,7 +2,7 @@ import React, {Component} from "react";
 import Card from "../../../../../src/views/public-component/Card/Card";
 import Row from "antd/lib/row";
 import Col from "antd/lib/col";
-import Table from "../../../../../src/views/public-component/Table/Table";
+import Table from "antd/lib/table"
 import {ColumnsType} from "antd/lib/table/interface";
 import images from "../../../../resources/images/images"
 import styles from "./LandingMarkets.module.sass"
@@ -182,6 +182,7 @@ class LandingMarkets extends Component {
                     </Row>
                     <div className="p-b-32">
                         <Table
+                            className="table"
                             columns={this.columns}
                             dataSource={this.dataSource}
                             pagination={false}
