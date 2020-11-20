@@ -8,13 +8,20 @@ import images from "../../../../../resources/images/images";
 import Input from "antd/lib/input";
 import styles from "./LandingBuyBtcForm.module.sass"
 
+interface ILandingBuyBtcFormState {
+    defaultImage: string
+}
 
 interface ICurrency {
     name: string
     image: string
 }
 
-class LandingBuyBtcForm extends Component {
+class LandingBuyBtcForm extends Component<{}, ILandingBuyBtcFormState> {
+    state: ILandingBuyBtcFormState = {
+        defaultImage: images.icon.usd
+    }
+
     digitalCurrency: Array<ICurrency> = [
         {
             image: images.icon.bitcoin,
@@ -28,7 +35,7 @@ class LandingBuyBtcForm extends Component {
 
     realCurrency: Array<ICurrency> = [
         {
-            image: images.icon.usa,
+            image: images.icon.usd,
             name: "USD"
         },
         {
@@ -41,23 +48,29 @@ class LandingBuyBtcForm extends Component {
         console.log('Received values from form: ', values);
     };
 
+    selectCurrency = (event: string) => {
+        const findCurrency = this.realCurrency.find(item => item.name === event)
+        this.setState({defaultImage: findCurrency.image})
+    }
+
+
     render() {
         return (
             <div className={styles.talanBuyBTC}>
                 <Row className="colorWhite fontSizeExtraSmall p-b-8">
                     <Col span={5}>I buy</Col>
                     <Col span={14} className="p-x-8">I spend</Col>
-                    <Col span={5}></Col>
                 </Row>
                 <Form
                     name="customized_form_controls"
                     layout="inline"
+                    initialValues={{btc: "BTC", usa: "USD"}}
                     onFinish={this.onFinish}
                 >
 
                     <Col span={5}>
                         <Form.Item name="btc" className="no-margin">
-                            <Select className="select gray round" defaultValue="btc">
+                            <Select className="select gray round">
                                 {this.digitalCurrency.map(currency =>
                                     <Select.Option value={currency.name} key={currency.name}>
                                         <img src={currency.image} className="icon normal"/>
@@ -70,16 +83,19 @@ class LandingBuyBtcForm extends Component {
                     <Col span={14} className="p-x-8">
                         <Row className={styles.realCurrency}>
                             <Col span={3} className="d-flex flex-x-center flex-y-center">
-                                <img src={images.icon.usa} className="icon normal"/>
+                                <img src={this.state.defaultImage} className="icon normal"/>
                             </Col>
                             <Col span={14}>
-                                <Form.Item name="usa" className="no-margin">
-                                    <Input placeholder="Enter amount" />
+                                <Form.Item name="amount" className="no-margin">
+                                    <Input placeholder="Enter amount" className="input transparent"/>
                                 </Form.Item>
                             </Col>
                             <Col span={7}>
                                 <Form.Item name="usa" className="no-margin">
-                                    <Select defaultValue="USD">
+                                    <Select
+                                        className="select transparent"
+                                        onChange={this.selectCurrency}
+                                    >
                                         {this.realCurrency.map(currency =>
                                             <Select.Option value={currency.name} key={currency.name}>
                                                 <div className="d-flex flex-x-between">

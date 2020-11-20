@@ -30,6 +30,9 @@ export default function Footer(props: LayoutProps) {
                 <span className="colorYellow m-x-4">Privacy Policy</span>.
               </span>
             </div>
+            <div>
+
+            </div>
           </Col>
           <Col span={15}>
             <Row>
