@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import Row from "antd/lib/row";
-import {Form} from "antd";
+import Form from "antd/lib/form";
 import Button from "antd/lib/button"
 import Col from "antd/lib/col";
 import Select from "antd/lib/select"

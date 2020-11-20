@@ -1,5 +1,4 @@
 import React, {Component} from "react";
-import Card from "../../../../../src/views/public-component/Card/Card";
 import Row from "antd/lib/row";
 import Col from "antd/lib/col";
 import Table from "antd/lib/table"
@@ -7,9 +6,7 @@ import {ColumnsType} from "antd/lib/table/interface";
 import images from "../../../../resources/images/images"
 import styles from "./LandingMarkets.module.sass"
 import Button from "antd/lib/button"
-import dynamic from "next/dynamic";
 
-// const LandingMarketsChart = dynamic(() => import('./Chart/LandingMarketsChart'))
 
 interface fakeResponse {
     pair: string;
@@ -19,6 +16,7 @@ interface fakeResponse {
     high: number;
     low: number;
     volume: number;
+    id: number
 }
 
 class LandingMarkets extends Component {
@@ -90,6 +88,7 @@ class LandingMarkets extends Component {
             high: 0.00021983,
             low: 0.00019863,
             volume: 0.0001,
+            id: 1
         },
         {
             pair: "talan / btc",
@@ -99,6 +98,7 @@ class LandingMarkets extends Component {
             high: 0.00021983,
             low: 0.00019863,
             volume: 0.0001,
+            id: 2
         },
         {
             pair: "talan / btc",
@@ -108,6 +108,7 @@ class LandingMarkets extends Component {
             high: 0.00021983,
             low: 0.00019863,
             volume: 0.0001,
+            id: 3
         },
         {
             pair: "talan / btc",
@@ -117,6 +118,7 @@ class LandingMarkets extends Component {
             high: 0.00021983,
             low: 0.00019863,
             volume: 0.0001,
+            id: 4
         },
         {
             pair: "talan / btc",
@@ -126,6 +128,7 @@ class LandingMarkets extends Component {
             high: 0.00021983,
             low: 0.00019863,
             volume: 0.0001,
+            id: 5
         },
         {
             pair: "talan / btc",
@@ -135,12 +138,13 @@ class LandingMarkets extends Component {
             high: 0.00021983,
             low: 0.00019863,
             volume: 0.0001,
+            id: 6
         },
     ];
 
     render() {
         return (
-            <Card backgroundColor="navy" className={styles.landingMarkets}>
+            <div className={styles.landingMarkets}>
                 <div className="container">
                     <Row justify="space-between">
                         <Col span={6} className="text-center">
@@ -205,7 +209,7 @@ class LandingMarkets extends Component {
                         </Button>
                     </div>
                 </div>
-            </Card>
+            </div>
         );
     }
 }

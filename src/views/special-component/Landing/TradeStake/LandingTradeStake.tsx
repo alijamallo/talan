@@ -1,5 +1,4 @@
 import React, {Component} from "react";
-import Card from "../../../../../src/views/public-component/Card/Card";
 import Row from "antd/lib/row";
 import Col from "antd/lib/col";
 import images from "../../../../resources/images/images";
@@ -9,7 +8,7 @@ import Button from "antd/lib/button"
 class LandingTradeStake extends Component {
     render() {
         return (
-            <Card backgroundColor="gray" className={styles.landingTradeStake}>
+            <div className={styles.landingTradeStake}>
                 <div className="container">
                     <Row>
                         <Col span={12}>
@@ -104,7 +103,7 @@ class LandingTradeStake extends Component {
                         </Col>
                     </Row>
                 </div>
-            </Card>
+            </div>
         );
     }
 }
