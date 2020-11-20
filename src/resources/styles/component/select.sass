@@ -1,0 +1,36 @@
+@import "../variable/color-variables"
+@import "../variable/variables"
+
+.select
+  &.round
+    .ant-select-selector
+      border-radius: $borderRadiusLarge !important
+
+  &.gray
+    .ant-select-selector
+      color: $white
+      background-color: $gray-200
+      border: none
+
+    .ant-select-arrow
+      color: $gray-100
+
+
+
+
+
+.ant-select-dropdown
+  background-color: $gray-200
+  border: 1px solid $gray-100
+  border-radius: $borderRadiusBase
+
+.ant-select-item-option-selected:not(.ant-select-item-option-disabled)
+  background-color: transparent
+  color: $yellow
+
+.ant-select-item-option-active:not(.ant-select-item-option-disabled)
+  background-color: transparent
+  border: 1px solid $yellow
+  color: $white
+
+

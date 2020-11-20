@@ -15,14 +15,14 @@ export default {
         trading: require("./landing/trading.svg"),
         cryptocurrency: require("./landing/cryptocurrency.svg"),
     },
-    test:{
-        btc: require("./test/btc.svg"),
-        usa: require("./test/usa.svg"),
-    },
     background:{
         one: require('./background/backround.png')
     },
     icon:{
-        notification: require("./icon/notification.svg")
+        notification: require("./icon/notification.svg"),
+        bitcoin: require("./icon/bitcoin.svg"),
+        usdn: require("./icon/usdn.svg"),
+        usd: require("./icon/usd.svg"),
+        gbp: require("./icon/gbp.svg"),
     }
 }
