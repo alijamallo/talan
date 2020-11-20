@@ -24,5 +24,9 @@ export default {
         usdn: require("./icon/usdn.svg"),
         usd: require("./icon/usd.svg"),
         gbp: require("./icon/gbp.svg"),
+    },
+    test:{
+        redChart: require("./test/redChart.svg"),
+        blueChart: require("./test/blueChart.svg"),
     }
 }

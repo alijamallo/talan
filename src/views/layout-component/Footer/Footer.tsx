@@ -5,6 +5,9 @@ import Col from "antd/lib/col";
 import Card from "../../public-component/Card/Card";
 import styles from "./Footer.module.sass";
 import Logo from "../../public-component/Logo/Logo";
+import Form from "antd/lib/form"
+import {Button} from "antd";
+import Input from "antd/lib/input";
 
 export default function Footer(props: LayoutProps) {
   const { Footer } = AntLayout;
@@ -30,8 +33,21 @@ export default function Footer(props: LayoutProps) {
                 <span className="colorYellow m-x-4">Privacy Policy</span>.
               </span>
             </div>
-            <div>
-
+            <div className="m-t-16">
+              <Form
+                  name="customized_form_controls"
+                  layout="inline"
+                  onFinish={() => {}}
+              >
+                <Form.Item name="price">
+                  <Input placeholder="Email *" className="input borderWhite round" />
+                </Form.Item>
+                <Form.Item>
+                  <Button className="button yellow no-border" shape="round" htmlType="submit">
+                    SUBSCRIBE
+                  </Button>
+                </Form.Item>
+              </Form>
             </div>
           </Col>
           <Col span={15}>

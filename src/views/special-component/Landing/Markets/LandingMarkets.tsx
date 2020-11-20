@@ -7,6 +7,9 @@ import {ColumnsType} from "antd/lib/table/interface";
 import images from "../../../../resources/images/images"
 import styles from "./LandingMarkets.module.sass"
 import Button from "antd/lib/button"
+import dynamic from "next/dynamic";
+
+// const LandingMarketsChart = dynamic(() => import('./Chart/LandingMarketsChart'))
 
 interface fakeResponse {
     pair: string;
@@ -69,8 +72,12 @@ class LandingMarkets extends Component {
         },
         {
             title: "CHART",
-            dataIndex: "chart",
             key: "chart",
+            render: (value: fakeResponse) => (
+                <div className={styles.tableChart}>
+                    {value.change > 0 ? <img src={images.test.blueChart}/> : <img src={images.test.redChart}/>}
+                </div>
+            ),
         },
     ];
 
