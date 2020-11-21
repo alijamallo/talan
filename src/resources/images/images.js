@@ -1,5 +1,5 @@
 export default {
-    public:{
+    public: {
         logo: require("./public/logo.svg"),
         rectangle: require("./public/rectangle.svg"),
     },
@@ -15,17 +15,23 @@ export default {
         trading: require("./landing/trading.svg"),
         cryptocurrency: require("./landing/cryptocurrency.svg"),
     },
-    background:{
+    background: {
         one: require('./background/backround.png')
     },
-    icon:{
+    icon: {
         notification: require("./icon/notification.svg"),
         bitcoin: require("./icon/bitcoin.svg"),
         usdn: require("./icon/usdn.svg"),
         usd: require("./icon/usd.svg"),
         gbp: require("./icon/gbp.svg"),
+        bag: require("./icon/bag.svg"),
+        circlePlus: require("./icon/circle-plus.svg"),
+        creditCard: require("./icon/credit-card.svg"),
+        download: require("./icon/download.svg"),
+        exchange: require("./icon/exchange.svg"),
+        upload: require("./icon/upload.svg"),
     },
-    test:{
+    test: {
         redChart: require("./test/redChart.svg"),
         blueChart: require("./test/blueChart.svg"),
     }

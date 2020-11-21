@@ -67,7 +67,6 @@ class LandingBuyBtcForm extends Component<{}, ILandingBuyBtcFormState> {
                     initialValues={{btc: "BTC", usa: "USD"}}
                     onFinish={this.onFinish}
                 >
-
                     <Col span={5}>
                         <Form.Item name="btc" className="no-margin">
                             <Select className="select gray round">
@@ -95,6 +94,7 @@ class LandingBuyBtcForm extends Component<{}, ILandingBuyBtcFormState> {
                                     <Select
                                         className="select transparent"
                                         onChange={this.selectCurrency}
+
                                     >
                                         {this.realCurrency.map(currency =>
                                             <Select.Option value={currency.name} key={currency.name}>
